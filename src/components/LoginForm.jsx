@@ -15,7 +15,7 @@ const LoginForm=()=>{
           "User-Secret": password,
         };
              try{
-                 await axios.get('https:api.chatengine.io/chats',{headers:authObject});
+                 await axios.get('https://api.chatengine.io/chats/',{headers:authObject});
                  localStorage.setItem('username',username);
                  localStorage.setItem('password',password);
                  window.location.reload();
@@ -37,7 +37,7 @@ const LoginForm=()=>{
               required
             />
             <input
-              type="text"
+              type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               className="input"
